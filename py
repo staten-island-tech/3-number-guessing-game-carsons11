@@ -5,13 +5,12 @@ def guessing():
     while guess != actual:
         if guess > 10 or guess < 1:
             print ("You HAVE to guess a number between 1 to 10")
-            break
-        if guess > actual:
+        elif 11 > guess > actual:
             print ("Your guess is too high")
         else:
             print ("Your guess is too low")
         print ("Guess again")
-        guess = int(input("What is your number?"))
+        guess = int(input("What is your guess?"))
     if guess == actual:
-        print ("Correct")
+        print ("Correct!")
 guessing()
